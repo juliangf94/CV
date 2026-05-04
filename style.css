@@ -326,27 +326,6 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* Print Button */
-.print-btn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: var(--primary-blue);
-    color: #ffffff;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    transition: background-color 0.2s ease;
-}
-
-.print-btn:hover {
-    background-color: var(--bg-dark-light-blue);
-}
 
 /* =====================
    RESPONSIVE
@@ -431,9 +410,7 @@ body {
         print-color-adjust: exact !important;
     }
 
-    body { margin: 0; padding: 0; zoom: 0.62; }
-
-    .print-btn { display: none !important; }
+    body { margin: 0; padding: 0; }
 
     .cv-page {
         margin: 0;
