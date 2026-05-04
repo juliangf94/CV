@@ -1,0 +1,514 @@
+/* Custom styling to match the PDF CV theme */
+:root {
+    --primary-blue: #0f3a5e; /* Matching the dark blue border from the PDF */
+    --text-dark: #333333;
+    --text-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-dark-light-blue: #0d3b66;
+    --bg-pastel-blue: #7aadd4;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+.cv-page {
+    max-width: 960px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* Header row: centrado vertical solo en desktop */
+@media (min-width: 992px) {
+    .cv-header .row {
+        align-items: center;
+    }
+}
+
+/* Header styling */
+.cv-header {
+    background-color: var(--bg-dark-light-blue);
+    border-top: 8px solid var(--primary-blue);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 1.5rem 0;
+    color: var(--text-white);
+}
+
+/* Profile image styling */
+.profile-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+}
+
+/* Override Bootstrap utility classes inside header */
+.cv-header .text-secondary,
+.cv-header .text-muted {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Typography */
+.name-title {
+    font-weight: 400;
+    font-size: 2rem !important;
+    white-space: nowrap;
+}
+
+.role-badge {
+    background-color: #1a6fa8 !important;
+    font-weight: 500;
+    white-space: normal;
+    text-align: left;
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Contact Links */
+.contact-links {
+    font-size: 0.8rem;
+}
+
+.contact-links a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: var(--text-white);
+}
+
+.contact-links a:hover {
+    color: var(--text-dark);
+}
+
+.contact-icon {
+    color: var(--text-white);
+    margin-right: 5px;
+}
+
+/* =====================
+   MAIN LAYOUT
+   ===================== */
+
+.cv-main {
+    padding: 0;
+    color: #000000;
+}
+
+.cv-sidebar > .cv-section:last-child,
+.cv-content > .cv-section:last-child {
+    margin-bottom: 0;
+}
+
+.cv-sidebar {
+    border-right: 1px solid #e0e0e0;
+    padding-right: 1.5rem;
+    background-color: var(--bg-pastel-blue) !important;
+}
+
+.cv-content {
+    padding-left: 2rem;
+}
+
+/* Section blocks */
+.cv-section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary-blue);
+    border-bottom: 3px solid var(--primary-blue);
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Skills */
+.skill-category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0.6rem 0 0.4rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-tag {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.skill-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.skill-icon-invert {
+    filter: invert(1);
+}
+
+/* Soft skills */
+.soft-skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.soft-skills li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.8rem;
+    border-left: 3px solid var(--primary-blue);
+}
+
+/* Langues */
+.lang-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.lang-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid var(--text-white);
+}
+
+.lang-name {
+    font-weight: 600;
+}
+
+.lang-level {
+    color: var(--primary-blue);
+    font-size: 0.85rem;
+}
+
+/* Loisirs */
+.loisirs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.loisirs-list li {
+    padding: 0.2rem 0;
+    color: #000000;
+}
+
+.loisirs-list i {
+    color: var(--primary-blue);
+    margin-right: 0.5rem;
+}
+
+.hobby-icon {
+    width: 1.1em;
+    height: 1.1em;
+    object-fit: contain;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    filter: invert(16%) sepia(61%) saturate(600%) hue-rotate(178deg) brightness(80%);
+}
+
+/* Experience items */
+.experience-item {
+    margin-bottom: 1.5rem;
+}
+
+.exp-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.2rem;
+}
+
+.exp-badge {
+    font-size: 0.7rem;
+    font-weight: 500;
+    background-color: var(--primary-blue);
+    color: #fff;
+    padding: 0.15rem 0.5rem;
+    border-radius: 20px;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+}
+
+.exp-meta {
+    font-size: 0.85rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.exp-bullets {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.exp-bullets li {
+    margin-bottom: 0.3rem;
+}
+
+/* Project items */
+.project-item {
+    margin-bottom: 1.5rem;
+}
+
+.project-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.15rem;
+}
+
+.project-stack {
+    font-size: 0.8rem;
+    color: #000000;
+    margin-bottom: 0.2rem;
+}
+
+.project-link {
+    font-size: 0.8rem;
+    color: var(--primary-blue);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    color: #000000;
+    margin: 0;
+}
+
+/* QR Code */
+.qr-code {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+}
+
+.qr-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.05em;
+}
+
+/* Print Button */
+.print-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.2s ease;
+}
+
+.print-btn:hover {
+    background-color: var(--bg-dark-light-blue);
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+
+@media (max-width: 991.98px) {
+    .cv-page {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .name-title {
+        white-space: normal;
+        font-size: 1.5rem !important;
+    }
+
+    .cv-header .col-lg-6 {
+        text-align: center;
+    }
+
+    .role-badge {
+        text-align: center;
+    }
+
+    .cv-sidebar {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 1.5rem;
+    }
+
+    .cv-content {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        text-align: left;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bio-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .contact-links {
+        align-items: flex-start;
+        display: inline-flex !important;
+    }
+
+    .qr-code {
+        width: 90px;
+        height: 90px;
+    }
+
+    .exp-title {
+        font-size: 0.95rem;
+    }
+
+    .skill-tag {
+        font-size: 0.7rem;
+    }
+}
+
+/* =====================
+   PRINT / PDF
+   ===================== */
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body { margin: 0; padding: 0; zoom: 0.62; }
+
+    .print-btn { display: none !important; }
+
+    .cv-page {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: none !important;
+        width: 100% !important;
+    }
+
+    /* Forzar container Bootstrap a ancho completo */
+    .container,
+    .container-fluid,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl {
+        max-width: none !important;
+        width: 100% !important;
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+
+    /* Forzar grid Bootstrap lg independientemente del viewport */
+    .col-md-3 { flex: 0 0 auto !important; width: 25% !important; }
+    .col-md-4 { flex: 0 0 auto !important; width: 33.3333% !important; }
+    .col-md-5 { flex: 0 0 auto !important; width: 41.6667% !important; }
+    .col-lg-3 { flex: 0 0 auto !important; width: 25% !important; }
+    .col-lg-4 { flex: 0 0 auto !important; width: 33.3333% !important; }
+    .col-lg-5 { flex: 0 0 auto !important; width: 41.6667% !important; }
+    .col-lg-6 { flex: 0 0 auto !important; width: 50% !important; }
+    .col-lg-8 { flex: 0 0 auto !important; width: 66.6667% !important; }
+
+    /* Orden de columnas desktop */
+    .order-lg-1 { order: 1 !important; }
+    .order-lg-2 { order: 2 !important; }
+
+    /* Mostrar bio en columna info */
+    .d-none.d-md-block { display: block !important; }
+    .d-md-none { display: none !important; }
+
+    /* Restaurar estilos desktop */
+    .cv-sidebar {
+        border-right: 1px solid #e0e0e0 !important;
+        border-bottom: none !important;
+        padding: 1rem 1.5rem !important;
+    }
+    .cv-content { padding: 1rem 1rem 1rem 2rem !important; }
+    .name-title { white-space: nowrap !important; font-size: 2rem !important; }
+    .section-title { text-align: center !important; }
+
+    /* Reducir espaciado para que entre en 1 página */
+    .cv-header { padding: 0.75rem 0 !important; }
+    .profile-img { width: 140px !important; height: 140px !important; }
+    .cv-section { margin-bottom: 0.75rem !important; }
+    .experience-item { margin-bottom: 0.6rem !important; }
+    .project-item { margin-bottom: 0.6rem !important; }
+    .bio-text { font-size: 0.9rem !important; line-height: 1.4 !important; }
+    .exp-bullets { font-size: 0.82rem !important; }
+    .exp-bullets li { margin-bottom: 0.15rem !important; }
+    .project-desc { font-size: 0.82rem !important; }
+    .soft-skills { font-size: 0.82rem !important; }
+    .soft-skills li { margin-bottom: 0.25rem !important; }
+    .lang-list { font-size: 0.82rem !important; }
+    .loisirs-list { font-size: 0.82rem !important; }
+
+    /* Skill tags más compactos = más por fila = menos filas */
+    .skill-tag { font-size: 0.68rem !important; padding: 0.15rem 0.4rem !important; gap: 0.2rem !important; }
+    .skill-icon { width: 16px !important; height: 16px !important; }
+    .skill-tags { gap: 0.25rem !important; margin-bottom: 0.3rem !important; }
+    .skill-category { margin: 0.4rem 0 0.2rem !important; }
+
+    /* Estirar sidebar y contenido hasta el final de la página */
+    .cv-main .row { align-items: stretch !important; }
+    .cv-sidebar { min-height: 100% !important; }
+
+    a { color: inherit; text-decoration: none; }
+    .experience-item, .project-item { break-inside: avoid; }
+}
