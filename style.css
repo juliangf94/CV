@@ -63,6 +63,7 @@ body {
 
 .role-badge {
     background-color: #1a6fa8 !important;
+    font-size: 0.78rem !important;
     font-weight: 500;
     white-space: normal;
     text-align: left;
@@ -456,6 +457,8 @@ body {
         border-right: 1px solid #e0e0e0 !important;
         border-bottom: none !important;
         padding: 1rem 1.5rem !important;
+        margin-left: -1rem !important;
+        padding-left: 2.5rem !important;
     }
     .cv-content { padding: 1rem 1rem 1rem 2rem !important; }
     .name-title { white-space: nowrap !important; font-size: 2rem !important; }
@@ -463,11 +466,15 @@ body {
 
     /* Reducir espaciado para que entre en 1 página */
     .cv-header { padding: 0.75rem 0 !important; }
-    .profile-img { width: 140px !important; height: 140px !important; }
+    .cv-header .row { align-items: flex-start !important; }
+    .profile-img { width: 175px !important; height: 175px !important; }
     .cv-section { margin-bottom: 0.75rem !important; }
     .experience-item { margin-bottom: 0.6rem !important; }
     .project-item { margin-bottom: 0.6rem !important; }
-    .bio-text { font-size: 0.9rem !important; line-height: 1.4 !important; }
+    .bio-text { font-size: 1rem !important; line-height: 1.4 !important; }
+    .cv-header .col-lg-6 { padding-left: 0 !important; }
+    .cv-header .col-md-4 { width: 20% !important; }
+    .cv-header .col-lg-6 { width: 55% !important; }
     .exp-bullets { font-size: 0.82rem !important; }
     .exp-bullets li { margin-bottom: 0.15rem !important; }
     .project-desc { font-size: 0.82rem !important; }
